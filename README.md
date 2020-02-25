@@ -1,7 +1,15 @@
 # Disaster Response Pipeline Project
 
 <h2>Table of Contents</h2>
-Libraries Used: Files Description Datasets and Inputs My Questions Data Science Approuch Algo used: My findings Acknowledgments and thanks
+<ol>
+Libraries Used:  
+  <li>Background</li>
+  <li>Libraries</li>
+  <li>Files Description</li>
+  <li>Approuch</li>
+  <li>Running the Scripts</li>
+  <li>Acknowledgments and thanks</li>
+  </ol>
 
 <h3>Background</h3>
 The project aim is to use tweets used in disasters and their labels, to process them in a ML model. To then deploy the model to be used with an API to categorize new messages to 36 different labels.
