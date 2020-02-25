@@ -36,4 +36,10 @@ Libraries Used: The project was done on Jupyter Notebook and Python 3.0, below a
 2. To take in the ready file and place in a sql DB for future training and modeling.
 3. To read in the ready files from db to train the RF classfier pipeline and out a pickle file, to be used in the API.
 
+<h3> Running the Scripts</h3>
+To run the ML model, run the below scprit in your command line:
+1. <code>python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db</code>
+
+
+
 
