@@ -42,12 +42,13 @@ Libraries Used: The project was done on Jupyter Notebook and Python 3.0, below a
 
 <h3> Running the Scripts</h3>
 To run the ML model, run the below scprit in your command line:
-
+<ol>
 To run the ETL and ready the files for merging and concoating, then saved into a sql lite db.
-1. <code>python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db</code>
+<li> <code>python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db</code></li>
 
 To read from the db the file and run the pipeline to train the classifier
-2. <code>python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl </code>
+<li> <code>python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl </code></li>
+</ol>
 
 
 
