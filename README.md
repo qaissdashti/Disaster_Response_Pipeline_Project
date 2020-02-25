@@ -41,14 +41,17 @@ Libraries Used: The project was done on Jupyter Notebook and Python 3.0, below a
   </ol>
 
 <h3> Running the Scripts</h3>
-To run the ML model, run the below scprit in your command line:
+To run the ML API app, run the below scprit in your command line:
 <ol>
 To run the ETL and ready the files for merging and concoating, then saved into a sql lite db.
 <li> <code>python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db</code></li>
 
 To read from the db the file and run the pipeline to train the classifier
+
 <li> <code>python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl </code></li>
 </ol>
 
+<h3>Acknowledgments and thanks</h3>
+Thanks for figure eight company in providing the data for analyses, and also thanks to Udacity team for amazing support.
 
 
