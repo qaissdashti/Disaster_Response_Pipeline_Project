@@ -21,20 +21,24 @@ Libraries Used: The project was done on Jupyter Notebook and Python 3.0, below a
 8. numpy
 
 <h3>Files Description</h3>
-1. messages.csv - file with all the msg used to train the ML model
-2. categories.csv - 36 categories or labels of the messages.
-3. disaster_categories.csv - all categories of the dataset
-4. disaster_messages.csv - all messages of the dataset
-5. process_data.py - script to preprocess the data, and also clean and concat them togther.
-6. DisasterResponse.db: sqLite database containing messages and categories
-7. train_classifier.py: script to read in the db and train the model, and output a pickle file.
-8. classifier.pkl: output of ML model
-9. run.py: script to read from the db and run the web app
+<ol>
+<li>messages.csv - file with all the msg used to train the ML model</li>
+<li> categories.csv - 36 categories or labels of the messages.</li>
+<li> disaster_categories.csv - all categories of the dataset</li>
+<li> disaster_messages.csv - all messages of the dataset</li>
+<li> process_data.py - script to preprocess the data, and also clean and concat them togther.</li>
+<li> DisasterResponse.db: sqLite database containing messages and categories</li>
+<li> train_classifier.py: script to read in the db and train the model, and output a pickle file.</li>
+<li> classifier.pkl: output of ML model</li>
+<li> run.py: script to read from the db and run the web app</li>
+  </ol>
 
 <h3>Approuch</h3>
-1. To build an ETL to clean and preprocess the files, and then ready for modeling
-2. To take in the ready file and place in a sql DB for future training and modeling.
-3. To read in the ready files from db to train the RF classfier pipeline and out a pickle file, to be used in the API.
+<ol>
+<li> To build an ETL to clean and preprocess the files, and then ready for modeling</li>
+<li> To take in the ready file and place in a sql DB for future training and modeling.</li>
+<li> To read in the ready files from db to train the RF classfier pipeline and out a pickle file, to be used in the API.</li>
+  </ol>
 
 <h3> Running the Scripts</h3>
 To run the ML model, run the below scprit in your command line:
