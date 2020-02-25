@@ -31,3 +31,9 @@ Libraries Used: The project was done on Jupyter Notebook and Python 3.0, below a
 8. classifier.pkl: output of ML model
 9. run.py: script to read from the db and run the web app
 
+<h3>Approuch</h3>
+1. To build an ETL to clean and preprocess the files, and then ready for modeling
+2. To take in the ready file and place in a sql DB for future training and modeling.
+3. To read in the ready files from db to train the RF classfier pipeline and out a pickle file, to be used in the API.
+
+
