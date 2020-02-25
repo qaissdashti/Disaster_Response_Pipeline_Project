@@ -23,3 +23,11 @@ Libraries Used: The project was done on Jupyter Notebook and Python 3.0, below a
 <h3>Files Description</h3>
 1. messages.csv - file with all the msg used to train the ML model
 2. categories.csv - 36 categories or labels of the messages.
+3. disaster_categories.csv - all categories of the dataset
+4. disaster_messages.csv - all messages of the dataset
+5. process_data.py - script to preprocess the data, and also clean and concat them togther.
+6. DisasterResponse.db: sqLite database containing messages and categories
+7. train_classifier.py: script to read in the db and train the model, and output a pickle file.
+8. classifier.pkl: output of ML model
+9. run.py: script to read from the db and run the web app
+
