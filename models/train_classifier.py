@@ -26,7 +26,7 @@ stop_words = set(stopwords.words('english'))
 def load_data(database_filepath):
     print("this is the answer " +  database_filepath)
     engine = create_engine('sqlite:///' + database_filepath)
-    df = pd.read_sql_table('qaiss_df_ready7', engine)
+    df = pd.read_sql_table('qaiss_df_ready8', engine)
     print(df.columns)
     X = df.message
     Y = df.iloc[:, 4:]
@@ -54,15 +54,23 @@ def tokenize(text):
 
 def build_model():
     """
-    The function can be used to process the model faster but with no CV.
+    The function builds a model based on Random Forest, and uses GridSearch to find
+    the best parameter.
     """
     pipeline = Pipeline([
         ('vect', CountVectorizer(tokenizer=tokenize)),
         ('tfidf', TfidfTransformer()),
         ('clf', MultiOutputClassifier(RandomForestClassifier()))
     ])
-     
-    return pipeline
+    
+    params = {'clf__estimator__n_estimators': [50, 100],
+                  'clf__estimator__min_samples_split': [2, 4],
+                  'clf__estimator__criterion': ['entropy', 'gini']
+                 }
+    
+    cv = GridSearchCV(pipeline, param_grid=params)
+    
+    return cv
 
 
 def evaluate_model(model, X_test, Y_test, category_names):
