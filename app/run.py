@@ -27,7 +27,7 @@ def tokenize(text):
 
 # load data
 engine = create_engine('sqlite:///../data/DisasterResponse.db')
-df = pd.read_sql_table('qaiss_df_ready7', engine)
+df = pd.read_sql_table('qaiss_df_ready8', engine)
 
 # load model
 model = joblib.load("../models/classifier.pkl")
@@ -42,8 +42,13 @@ def index():
     # TODO: Below is an example - modify to extract data for your own visuals
     genre_counts = df.groupby('genre').count()['message']
     genre_names = list(genre_counts.index)
+    print(df)
     
     # create visuals
+    
+    top_category_count = df.iloc[:,4:].sum().sort_values(ascending=False)[1:10]
+    top_category_names = list(top_category_count.index)
+    
     # TODO: Below is an example - modify to create your own visuals
     graphs = [
         {
@@ -63,7 +68,28 @@ def index():
                     'title': "Genre"
                 }
             }
+        },
+        
+        {
+            'data': [
+                Bar(
+                    x=top_category_names,
+                    y=top_category_count
+           
+                )
+            ],
+
+            'layout': {
+                'title': 'Top Ten Categories',
+                'yaxis': {
+                    'title': "Count"
+                },
+                'xaxis': {
+                    'title': "Categories"
+                }
+            }
         }
+        
     ]
     
     # encode plotly graphs in JSON
