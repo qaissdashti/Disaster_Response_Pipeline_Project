@@ -59,5 +59,7 @@ To read from the db the file and run the pipeline to train the classifier
 <li> <code>python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl </code></li>
 </ol>
 
+![img](images/ML_uda.png)
+
 <h3>Acknowledgments and thanks</h3>
 Thanks for figure eight company in providing the data for analyses, and also thanks to Udacity team for amazing support.
